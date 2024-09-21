@@ -8,7 +8,7 @@ int main() {
         printf("Huruf kecil\n");
     } else if (yahudi >= 'A' && yahudi <= 'Z') {
         printf("Huruf besar\n");
-    } else if (yahudi <= 0 && yahudi >= 1000000) {
+    } else if (yahudi >= '0' && yahudi >= '9') {
         printf("Karakter angka\n");
     } else {
         printf("Karakter khusus\n");
