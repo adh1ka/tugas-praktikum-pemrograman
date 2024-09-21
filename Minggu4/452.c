@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    char yahudi;
+    char karakter;
     printf("Input Karakter : ");
-    scanf("%c", &yahudi);
-    if (yahudi  >= 'a' && yahudi <= 'z') {
+    scanf("%c", &karakter);
+    if (karakter  >= 'a' && karakter <= 'z') {
         printf("Huruf kecil\n");
-    } else if (yahudi >= 'A' && yahudi <= 'Z') {
+    } else if (karakter >= 'A' && karakter <= 'Z') {
         printf("Huruf besar\n");
-    } else if (yahudi >= '0' && yahudi >= '9') {
+    } else if (karakter >= '0' && karakter >= '9') {
         printf("Karakter angka\n");
     } else {
         printf("Karakter khusus\n");
