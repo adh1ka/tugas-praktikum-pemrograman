@@ -11,7 +11,7 @@ int main() {
         fahrenheit = (celsius * 9 / 5) + 32;
         reamur = celsius * 4 / 5;
         kelvin = celsius + 273.15;
-        printf("%-4d \t %-5.1f \t \t %-6.1f \t %-6.1f \t %-6.1f\n", i, celsius, fahrenheit, reamur, kelvin);
+        printf("%-4d \t %-5.1f \t \t %-6.1f \t %-6.1f \t %-6.1f\n", i + 1, celsius, fahrenheit, reamur, kelvin);
     }
     return 0;
 }

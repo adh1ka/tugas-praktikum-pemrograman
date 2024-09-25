@@ -10,7 +10,7 @@ int main() {
         scanf("%d", &angka);
         total += angka; 
     }
-    printf("Jumlah seluruh nilai adalah = %f\n", total);
-    printf("Nilai rata-ratanya adalah = %f\n", total / n);
+    printf("Jumlah seluruh nilai adalah = %.2f\n", total);
+    printf("Nilai rata-ratanya adalah = %.2f\n", total / n);
     return 0;
-}
+}   
