@@ -12,6 +12,7 @@ int main() {
         }
     }
     printf("\n");
+
     //1, 2, 9, 16, 25
     for (int i = 1; i <= n; i++) {
         b = i * i;
@@ -21,6 +22,7 @@ int main() {
         }
     }
     printf("\n");
+
     //1, 4, 27, 64, 125
     for (int i = 1; i <= n; i++) {
         c = pow(i, 3);
@@ -30,5 +32,7 @@ int main() {
         }
     }
     printf("\n");
+
+
     return 0;
 }
