@@ -1,4 +1,4 @@
-//BELUM SELESAI YA CIK
+//BELUM SELESAI
 
 #include <stdio.h>
 
