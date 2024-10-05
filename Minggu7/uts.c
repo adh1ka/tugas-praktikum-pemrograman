@@ -22,9 +22,9 @@ int main() {
         for (int i = 1; i <= r; i++) {
             printf("Input ohm resistor ke-%d : ", i);
             scanf("%lf", &data);
-            total += 1.0 / total;
+            total += 1.0 / data;
         }
-        total = 1.0 / data;
+        total = 1.0 / total;
         printf("Total resistansi dari rangkaian paralel : %lf ohm \n", total);
     } else {
         printf("Masukkan pilihan dengan benar!!!\n");
