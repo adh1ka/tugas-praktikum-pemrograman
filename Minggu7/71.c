@@ -36,8 +36,43 @@ void cetak_max(const int array[][8], const int baris, const int kolom) {
     printf("%d \n", max);
 }
 
-void cetak_sort(const int array[][8], const int baris, const int kolom) {
-   
+void cetak_sort(int array[][8], int baris, int kolom) {
+    int swap;
+    float total = 0;
+    float rata = 0;
+    for (int i = 0; i < baris; i++) {
+        for (int j = 0; j < kolom; j++) {
+            for (int k = 0; k < kolom; k++) {
+                if (array[i][j] < array [i][k]) {
+                    swap = array[i][j];
+                    array[i][j] = array[i][k];
+                    array[i][k] = swap;
+                }
+            }
+        }
+    }  
+    for (int i = 0; i < baris; ++i) {
+        for (int j = 0; j < kolom; ++j) {
+            printf("%d ", array[i][j]);
+            total += array[i][j];
+        }
+    printf("\n");
+    }
+}
+
+void cetak_rata(int array[][8], int baris, int kolom) {
+    float total = 0, rata = 0;
+    for (int row = 0; row < baris; row++) {
+        for (int col = 0; col < kolom; col++) {
+            total += array[row][col];
+        }
+            rata = total / kolom;
+            printf("Rata dari baris %d adalah %.2f\n", row + 1,  rata);
+    }
+}
+
+void cetak_median(int array[][8], int baris, int kolom) {
+    
 }
 
 int main() {
@@ -52,6 +87,9 @@ int main() {
     cetak_max(array, baris, kolom);
     printf("SORT ANGKA TERKECIL \n");
     cetak_sort(array, baris, kolom);
+    printf("RATA \n");
+    cetak_rata(array, baris, kolom);
+
     return 0;
 
 }
