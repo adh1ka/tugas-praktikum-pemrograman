@@ -22,10 +22,10 @@ void sieveOfEratosthenes(int n) {
 
 int main() {
     int n;
-    printf("Masukkan batas atas (n): ");
+    printf("Input N: ");
     scanf("%d", &n);
     
-    printf("Bilangan prima antara 1 sampai %d adalah:\n", n);
+    printf("Bilangan prima 1 - %d :\n", n);
     sieveOfEratosthenes(n);
     
     return 0;
