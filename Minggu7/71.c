@@ -63,6 +63,7 @@ void cetak_sort(int array[][8], int baris, int kolom) {
 void cetak_rata(int array[][8], int baris, int kolom) {
     float total = 0, rata = 0;
     for (int row = 0; row < baris; row++) {
+        float total = 0;
         for (int col = 0; col < kolom; col++) {
             total += array[row][col];
         }
@@ -72,7 +73,28 @@ void cetak_rata(int array[][8], int baris, int kolom) {
 }
 
 void cetak_median(int array[][8], int baris, int kolom) {
-    
+    int temp[8];
+    float median;
+    for (int row = 0; row < baris; row++) {
+        for (int col = 0; col < kolom; col++) {
+            temp[col] = array[row][col];
+        }
+        for (int i = 0; i < kolom; ++i) {
+            for (int j = i + 1; j < kolom; j++) {
+                if (temp[i] > temp[j]) {
+                    int swap = temp[i];
+                    temp[i] = temp[j];
+                    temp[j] = swap;
+                }
+            }
+        }
+        if (kolom % 2 == 0) {
+            median = (temp[kolom / 2 - 1] + temp[kolom / 2]) / 2;
+        } else {
+            median = temp[kolom / 2];
+        }
+        printf("Nilai tengah dari baris %d adalah %f \n", row + 1, median);
+    }
 }
 
 int main() {
@@ -89,6 +111,8 @@ int main() {
     cetak_sort(array, baris, kolom);
     printf("RATA \n");
     cetak_rata(array, baris, kolom);
+    printf("NILAI TENGAH \n");
+    cetak_median(array, baris, kolom);
 
     return 0;
 
